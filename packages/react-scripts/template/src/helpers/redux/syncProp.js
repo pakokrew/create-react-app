@@ -5,9 +5,9 @@ const actionName = (reducerName, propName) => `SET_${reducerName}_${propName}`;
 
 const defaultMiddleware = value => value;
 
-const defaultAction = (reducerName, propName, middleware) => (value) => ({
+const defaultAction = (reducerName, propName, middleware) => (...actionArgs) => ({
   type: actionName(reducerName, propName),
-  value: middleware(value),
+  value: middleware(...actionArgs),
 });
 
 const defaultHandler = (reducerName, propName, middleware) => (state, { value }) => ({
