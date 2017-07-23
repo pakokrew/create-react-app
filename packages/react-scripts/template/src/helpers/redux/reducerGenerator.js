@@ -96,8 +96,10 @@ const defaultAsyncSelector = (reducerName, propName, defaultValue = null, select
 const syncProp = (reducerName, propName, reducerElmts) => {
   const elms = reducerElmts || {};
   const defaultValue = elms.defaultValue || null;
+
+  const initialValueRaw = (elms.initialValue !== undefined) ? elms.initialValue : null;
   const initialValue = elms.async ?
-    AsyncProperty(false, elms.initialValue) : (elms.initialValue || null);
+    AsyncProperty(false, initialValueRaw) : initialValueRaw;
 
   const actionMiddleware = elms.actionMiddleware || defaultMiddleware;
   const handlerMiddleware = elms.handlerMiddleware || defaultMiddleware;
