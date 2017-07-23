@@ -7,7 +7,7 @@ export class Home extends Component {
 
   render() {
     return (
-      <div className="work_container">
+      <div className="home_container">
         Work
       </div>
     );
@@ -23,7 +23,7 @@ Home.defaultProps = {
 const mapStateToProps = state => ({
 });
 
-const mapDispatchToProps = () => ({
-});
+const mapDispatchToProps = {
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
