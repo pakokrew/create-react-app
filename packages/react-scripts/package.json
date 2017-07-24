@@ -1,8 +1,8 @@
 {
-  "name": "react-scripts",
+  "name": "ngfar-react-scripts",
   "version": "1.0.10",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "description": "Configuration and scripts for Create React App. Customized by ngfar",
+  "repository": "pakokrew/create-react-app-ngfar",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=6"
